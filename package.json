@@ -2,10 +2,15 @@
   "name": "myskills",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+	"prebuild": "echo 'Zaczyna budować plik bule.js'",
+	"build": "webpack",
+	"postbuild": "echo 'Skończyłem budować plik bundle.js'",
+
+	"watch": "webpack -w",
+	"start": "http-server"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Achazu/myskills.git"
@@ -16,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/Achazu/myskills/issues"
   },
-  "homepage": "https://github.com/Achazu/myskills#readme"
+  "homepage": "https://github.com/Achazu/myskills#readme",
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "http-server": "^0.11.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
 }
